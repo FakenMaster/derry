@@ -14,6 +14,7 @@ void executor(String input, bool silent) {
   final executorPointer = dylib.lookup<NativeFunction<executor_fn>>('executor');
   final executorFunction = executorPointer.asFunction<Executor>();
 
-  final script = Utf8.toUtf8(input).cast<Utf8>();
+  final script = input.toNativeUtf8();
+
   executorFunction(script, silent ? 1 : 0);
 }

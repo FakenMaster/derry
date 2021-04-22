@@ -15,7 +15,7 @@ import 'dart:isolate' show Isolate;
 import 'dart:io' show Platform, File, Directory;
 
 import 'package:yaml/yaml.dart';
-import 'package:ffi/ffi.dart' show Utf8;
+import 'package:ffi/ffi.dart';
 import 'package:console/console.dart' show format;
 import 'package:args/command_runner.dart' show Command;
 import 'package:equatable/equatable.dart' show Equatable;
